@@ -40,7 +40,7 @@
   "dependencies": {
     "@aragon/osx": "1.4.0",
     "@aragon/osx-commons-contracts": "1.4.0",
-    "@aragon/token-voting-plugin": "github:aragon/token-voting-plugin#v1.3.0",
+    "@aragon/token-voting-plugin": "github:aragon/token-voting-plugin#v1.4",
     "@ensdomains/ens-contracts": "0.0.11",
     "@excubiae/contracts": "0.11.0",
     "@maci-protocol/contracts": "0.0.0-ci.2c98791",

@@ -17,9 +17,8 @@ import {
 import {IDAO} from "@aragon/osx-commons-contracts/src/dao/IDAO.sol";
 import {DAO} from "@aragon/osx/core/dao/DAO.sol";
 import {ProxyLib} from "@aragon/osx-commons-contracts/src/utils/deployment/ProxyLib.sol";
-import {GovernanceERC20} from "@aragon/token-voting-plugin/ERC20/governance/GovernanceERC20.sol";
-import {GovernanceWrappedERC20} from
-    "@aragon/token-voting-plugin/ERC20/governance/GovernanceWrappedERC20.sol";
+import {GovernanceERC20} from "@aragon/token-voting-plugin/erc20/GovernanceERC20.sol";
+import {GovernanceWrappedERC20} from "@aragon/token-voting-plugin/erc20/GovernanceWrappedERC20.sol";
 
 import {IMaciVoting} from "./IMaciVoting.sol";
 import {MaciVoting} from "./MaciVoting.sol";

@@ -28,7 +28,7 @@ jobs:
           version: 10
 
       - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
+        uses: foundry-rs/foundry-toolchain@v1 # already executes `foundryup`
 
       - name: Set up env variables
         run: |

@@ -8,9 +8,8 @@ import {IERC20Upgradeable} from
 
 import {DAO} from "@aragon/osx/core/dao/DAO.sol";
 import {IDAO} from "@aragon/osx-commons-contracts/src/dao/IDAO.sol";
-import {GovernanceERC20} from "@aragon/token-voting-plugin/ERC20/governance/GovernanceERC20.sol";
-import {GovernanceWrappedERC20} from
-    "@aragon/token-voting-plugin/ERC20/governance/GovernanceWrappedERC20.sol";
+import {GovernanceERC20} from "@aragon/token-voting-plugin/erc20/GovernanceERC20.sol";
+import {GovernanceWrappedERC20} from "@aragon/token-voting-plugin/erc20/GovernanceWrappedERC20.sol";
 
 import {MACI} from "@maci-protocol/contracts/contracts/MACI.sol";
 import {IMACI} from "@maci-protocol/contracts/contracts/interfaces/IMACI.sol";

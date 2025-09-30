@@ -5,11 +5,10 @@ import {IVotesUpgradeable} from
     "@openzeppelin/contracts-upgradeable/governance/utils/IVotesUpgradeable.sol";
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {IGovernanceWrappedERC20} from
-    "@aragon/token-voting-plugin/ERC20/governance/IGovernanceWrappedERC20.sol";
+    "@aragon/token-voting-plugin/erc20/IGovernanceWrappedERC20.sol";
 
-import {GovernanceERC20} from "@aragon/token-voting-plugin/ERC20/governance/GovernanceERC20.sol";
-import {GovernanceWrappedERC20} from
-    "@aragon/token-voting-plugin/ERC20/governance/GovernanceWrappedERC20.sol";
+import {GovernanceERC20} from "@aragon/token-voting-plugin/erc20/GovernanceERC20.sol";
+import {GovernanceWrappedERC20} from "@aragon/token-voting-plugin/erc20/GovernanceWrappedERC20.sol";
 import {IPlugin} from "@aragon/osx-commons-contracts/src/plugin/IPlugin.sol";
 import {Action} from "@aragon/osx-commons-contracts/src/executors/IExecutor.sol";
 

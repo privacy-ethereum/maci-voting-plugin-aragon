@@ -10,9 +10,8 @@ import {IDAO} from "@aragon/osx-commons-contracts/src/dao/IDAO.sol";
 import {PluginRepoFactory} from "@aragon/osx/framework/plugin/repo/PluginRepoFactory.sol";
 import {PluginRepo} from "@aragon/osx/framework/plugin/repo/PluginRepo.sol";
 import {PluginSetupRef} from "@aragon/osx/framework/plugin/setup/PluginSetupProcessorHelpers.sol";
-import {GovernanceERC20} from "@aragon/token-voting-plugin/ERC20/governance/GovernanceERC20.sol";
-import {GovernanceWrappedERC20} from
-    "@aragon/token-voting-plugin/ERC20/governance/GovernanceWrappedERC20.sol";
+import {GovernanceERC20} from "@aragon/token-voting-plugin/erc20/GovernanceERC20.sol";
+import {GovernanceWrappedERC20} from "@aragon/token-voting-plugin/erc20/GovernanceWrappedERC20.sol";
 
 import {IVotesUpgradeable} from
     "@openzeppelin/contracts-upgradeable/governance/utils/IVotesUpgradeable.sol";
@@ -89,7 +88,11 @@ contract MaciVotingScript is Script {
             IDAO(address(0)),
             "",
             "",
-            GovernanceERC20.MintSettings({receivers: new address[](0), amounts: new uint256[](0)})
+            GovernanceERC20.MintSettings({
+                receivers: new address[](0),
+                amounts: new uint256[](0),
+                ensureDelegationOnMint: true
+            })
         );
         GovernanceWrappedERC20 governanceWrappedERC20Base =
             new GovernanceWrappedERC20(IERC20Upgradeable(address(0)), "", "");
