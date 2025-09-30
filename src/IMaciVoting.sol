@@ -12,6 +12,18 @@ import {DomainObjs} from "@maci-protocol/contracts/contracts/utilities/DomainObj
 import {Params} from "@maci-protocol/contracts/contracts/utilities/Params.sol";
 
 interface IMaciVoting {
+    /// @notice A struct containing the initialization parameters for the MACI voting plugin.
+    /// @param dao The DAO instance where the plugin is being initialized.
+    /// @param token The DAO voting token contract address (must implement `IVotesUpgradeable`).
+    /// @param maci The MACI contract address.
+    /// @param coordinatorPublicKey The public key of the coordinator.
+    /// @param votingSettings The voting settings for proposals.
+    /// @param targetConfig Configuration for the execution target, specifying the target address
+    /// @param policyFactory The address of the policy factory (e.g. ERC20VotesPolicyFactory)
+    /// @param checkerFactory The address of the checker factory (e.g. ERC20VotesCheckerFactory)
+    /// @param voiceCreditProxyFactory The voice credit proxy factory
+    /// @param treeDepths The depths of the Merkle trees used in MACI.
+    /// @param messageBatchSize The size of message batches for processing in MACI.
     struct InitializationParams {
         IDAO dao;
         IVotesUpgradeable token;
@@ -19,8 +31,6 @@ interface IMaciVoting {
         DomainObjs.PublicKey coordinatorPublicKey;
         VotingSettings votingSettings;
         IPlugin.TargetConfig targetConfig;
-        address verifier;
-        address verifyingKeysRegistry;
         address policyFactory;
         address checkerFactory;
         address voiceCreditProxyFactory;

@@ -134,8 +134,6 @@ contract MaciVoting is PluginUUPSUpgradeable, ProposalUpgradeable, IMaciVoting {
         maci = MACI(_params.maci);
         coordinatorPublicKey = _params.coordinatorPublicKey;
         votingSettings = _params.votingSettings;
-        verifier = _params.verifier;
-        verifyingKeysRegistry = _params.verifyingKeysRegistry;
         policyFactory = IERC20VotesPolicyFactory(_params.policyFactory);
         checkerFactory = IERC20VotesCheckerFactory(_params.checkerFactory);
         voiceCreditProxyFactory = IInitialVoiceCreditsProxyFactory(_params.voiceCreditProxyFactory);
@@ -230,8 +228,6 @@ contract MaciVoting is PluginUUPSUpgradeable, ProposalUpgradeable, IMaciVoting {
             treeDepths: treeDepths,
             messageBatchSize: messageBatchSize,
             coordinatorPublicKey: coordinatorPublicKey,
-            verifier: verifier,
-            verifyingKeysRegistry: verifyingKeysRegistry,
             mode: votingSettings.mode,
             policy: policy,
             initialVoiceCreditProxy: initialVoiceCreditProxy,

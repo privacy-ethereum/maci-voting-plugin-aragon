@@ -64,8 +64,6 @@ contract MaciVoting_Initialize_Test is MaciVoting_Test_Base {
         assertEq(voteOptions, initializationParams.votingSettings.voteOptions);
         assertEq(uint8(mode), uint8(initializationParams.votingSettings.mode));
 
-        assertEq(plugin.verifier(), initializationParams.verifier);
-        assertEq(plugin.verifyingKeysRegistry(), initializationParams.verifyingKeysRegistry);
         assertEq(address(plugin.policyFactory()), initializationParams.policyFactory);
         assertEq(address(plugin.checkerFactory()), initializationParams.checkerFactory);
         assertEq(

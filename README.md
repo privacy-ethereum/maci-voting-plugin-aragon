@@ -20,6 +20,20 @@ pnpm install # Install project dependencies
 
 Usage 🛠
 
+Remember to deploy the MACI contracts first using the MACI repo:
+
+```bash
+git clone https://github.com/privacy-ethereum/maci
+
+pnpm install
+
+pnpm run build
+
+cd maci/packages/contracts
+
+pnpm run deploy:sepolia
+```
+
 Testing
 
 Run tests to ensure your plugins are working correctly:

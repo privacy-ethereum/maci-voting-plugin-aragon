@@ -20,8 +20,6 @@ library Utils {
         DomainObjs.PublicKey coordinatorPublicKey;
         IMaciVoting.VotingSettings votingSettings;
         IPlugin.TargetConfig targetConfig;
-        address verifier;
-        address verifyingKeysRegistry;
         address policyFactory;
         address checkerFactory;
         address voiceCreditProxyFactory;
@@ -59,8 +57,6 @@ library Utils {
             parseMode(VM.envString("MODE"))
         );
         maciEnvVariables.targetConfig = defaultTargetConfig;
-        maciEnvVariables.verifier = VM.envAddress("VERIFIER_ADDRESS");
-        maciEnvVariables.verifyingKeysRegistry = VM.envAddress("VERIFYING_KEY_REGISTRY_ADDRESS");
         maciEnvVariables.policyFactory = VM.envAddress("POLICY_FACTORY_ADDRESS");
         maciEnvVariables.checkerFactory = VM.envAddress("CHECKER_FACTORY_ADDRESS");
         maciEnvVariables.voiceCreditProxyFactory =

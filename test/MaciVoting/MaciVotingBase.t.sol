@@ -54,8 +54,6 @@ abstract contract MaciVoting_Test_Base is AragonTest {
             coordinatorPublicKey: maciEnvVariables.coordinatorPublicKey,
             votingSettings: maciEnvVariables.votingSettings,
             targetConfig: maciEnvVariables.targetConfig,
-            verifier: maciEnvVariables.verifier,
-            verifyingKeysRegistry: maciEnvVariables.verifyingKeysRegistry,
             policyFactory: maciEnvVariables.policyFactory,
             checkerFactory: maciEnvVariables.checkerFactory,
             voiceCreditProxyFactory: maciEnvVariables.voiceCreditProxyFactory,
