@@ -6,7 +6,7 @@ import {IDAO} from "@aragon/osx-commons-contracts/src/dao/IDAO.sol";
 import {IPlugin} from "@aragon/osx-commons-contracts/src/plugin/IPlugin.sol";
 import {DomainObjs} from "@maci-protocol/contracts/contracts/utilities/DomainObjs.sol";
 import {Params} from "@maci-protocol/contracts/contracts/utilities/Params.sol";
-import {GovernanceERC20} from "@aragon/token-voting-plugin/ERC20/governance/GovernanceERC20.sol";
+import {GovernanceERC20} from "@aragon/token-voting-plugin/erc20/GovernanceERC20.sol";
 
 import {IMaciVoting} from "../src/IMaciVoting.sol";
 import {MaciVotingSetup} from "../src/MaciVotingSetup.sol";
@@ -82,8 +82,11 @@ library Utils {
             name: VM.envString("TOKEN_NAME"),
             symbol: VM.envString("TOKEN_SYMBOL")
         });
-        GovernanceERC20.MintSettings memory mintSettings =
-            GovernanceERC20.MintSettings({receivers: new address[](3), amounts: new uint256[](3)});
+        GovernanceERC20.MintSettings memory mintSettings = GovernanceERC20.MintSettings({
+            receivers: new address[](3),
+            amounts: new uint256[](3),
+            ensureDelegationOnMint: true
+        });
 
         address[] memory receivers = VM.envAddress("MINT_SETTINGS_RECEIVERS", ",");
         uint256 amount = VM.envUint("MINT_SETTINGS_AMOUNT");

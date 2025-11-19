@@ -1,6 +1,6 @@
 @aragon/osx/=node_modules/@aragon/osx/
 @aragon/osx-commons-contracts/=node_modules/@aragon/osx-commons-contracts/
-@aragon/token-voting-plugin/=node_modules/@aragon/token-voting-plugin/packages/contracts/src/
+@aragon/token-voting-plugin/=node_modules/@aragon/token-voting-plugin/src/
 @openzeppelin/contracts/=node_modules/@openzeppelin/contracts/
 @openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/
 
